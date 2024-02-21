@@ -3,32 +3,41 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .header {
     width: 100%;
+    padding: 17px 0;
 }
-.conteiner {
+
+.container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
 }
+
 .header__navigation {
     margin: auto 0;
 }
+
 .footer__navigation {
     margin: auto 0;
 }
+
 .navigation-list {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
 }
+
 .footer {
-    background-image: url(../images/footer.png);
+    background-image: url("../images/footer.png");
     background-color: #656565;
     width: 100%;
+    padding: 17px 0;
 }
+
 .logotype {
     text-decoration: none;
     font-family: "Lora", serif;
@@ -36,19 +45,24 @@
     font-size: 26px;
     text-transform: none;
 }
+
 .logotype_white {
     color: #FFFFFF;
 }
+
 header__logotype {
     padding: 10px;
 }
+
 .logotype_black {
     color: #2E2E2E;
 }
+
 .footer__logotype {
     padding: 10px;
 }
-.nav-element {
+
+.navigation-link {
     text-decoration: none;
     font-family: "oxygen", sans-serif;
     font-weight: 400;
@@ -56,23 +70,27 @@ header__logotype {
     font-size: 12px;
     text-transform: uppercase;
 }
-.nav-element_white {
+
+.navigation-link_white {
     color: #FFFFFF;
 }
-.nav-element_black {
+
+.navigation-link_black {
     color: #2E2E2E;
 }
-.header__nav-element {
+
+.header__navigation-link {
     padding: 10px;
 }
-.footer__nav-element {
+
+.footer__navigation-link {
     padding: 10px;
 }
+
 .heading {
-    margin: 100px 0;
-    text-align: center;
-    color: #2E2E2E;
+    padding: 100px 0;
 }
+
 .title {
     text-align: center;
     font-family: "Lora", serif;
@@ -82,6 +100,7 @@ header__logotype {
     font-weight: 400;
     color: #2E2E2E;
 }
+
 .subtitle {
     text-align: center;
     font-family: "oxygen", sans-serif;
@@ -90,12 +109,16 @@ header__logotype {
     font-size: 17px;
     color: #2E2E2E;
 }
+
 page__subtitle {
     margin-top: 20px;
 }
+
 .page__image {
     width: 100%;
+    border-radius: 2px;
 }
+
 .content-container {
     width: 100%;
     max-width: 960px;
@@ -107,6 +130,7 @@ page__subtitle {
     font-size: 24px;
     color: #101315;
 }
-.content-container__paragraf:not(:last-child) {
+
+.content-container__paragraph:not(:last-child) {
     margin-bottom: 20px;
 }
