@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header {
+    width: 100%;
+}
+.conteiner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.header__navigation {
+    margin: auto 0;
+}
+.footer__navigation {
+    margin: auto 0;
+}
+.navigation-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.footer {
+    background-image: url(../images/footer.png);
+    background-color: #656565;
+    width: 100%;
+}
+.logotype {
+    text-decoration: none;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-size: 26px;
+    text-transform: none;
+}
+.logotype_white {
+    color: #FFFFFF;
+}
+header__logotype {
+    padding: 10px;
+}
+.logotype_black {
+    color: #2E2E2E;
+}
+.footer__logotype {
+    padding: 10px;
+}
+.nav-element {
+    text-decoration: none;
+    font-family: "oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.nav-element_white {
+    color: #FFFFFF;
+}
+.nav-element_black {
+    color: #2E2E2E;
+}
+.header__nav-element {
+    padding: 10px;
+}
+.footer__nav-element {
+    padding: 10px;
+}
+.heading {
+    margin: 100px 0;
+    text-align: center;
+    color: #2E2E2E;
+}
+.title {
+    text-align: center;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 50px;
+    font-weight: 400;
+    color: #2E2E2E;
+}
+.subtitle {
+    text-align: center;
+    font-family: "oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color: #2E2E2E;
+}
+page__subtitle {
+    margin-top: 20px;
+}
+.page__image {
+    width: 100%;
+}
+.content-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-family: "oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #101315;
+}
+.content-container__paragraf:not(:last-child) {
+    margin-bottom: 20px;
+}

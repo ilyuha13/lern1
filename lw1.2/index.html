@@ -11,36 +11,31 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Oxygen&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style/style.css">
    <title>Document</title>
 </head>
 <body>
-   <div class="page-box flex-column items-centr">
-
-
-      <header class="header flex-row content-centr">
-         <div class="header-conteiner flex-row content-betwin">
-            <a class="logotype-black">Escape.</a>
-            <nav class="navigation flex-row content-centr">
-               <ul class="header-navigation-ul flex-row">
-                  <li class="flex-row content-centr items-centr elem-1"><a class="nav-element-black" href="##">home</a></li>
-                  <li class="flex-row content-centr items-centr elem-2"><a class="nav-element-black" href="##">categoris</a></li>
-                  <li class="flex-row content-centr items-centr elem-3"><a class="nav-element-black" href="##">about</a></li>
-                  <li class="flex-row content-centr items-centr elem-4"><a class="nav-element-black" href="##">contact</a></li>
+      <header class="header">
+         <div class="header__conteiner container">
+            <a class="header__logotype logotype logotype_black">Escape.</a>
+            <nav class="header__navigation navigation">
+               <ul class="header__navigation-list navigation-list">
+                  <li><a class="header__nav-element nav-element nav-element_black" href="#">home</a></li>
+                  <li><a class="header__nav-element nav-element nav-element_black" href="#">categoris</a></li>
+                  <li><a class="header__nav-element nav-element nav-element_black" href="#">about</a></li>
+                  <li><a class="header__nav-element nav-element nav-element_black" href="#">contact</a></li>
                </ul>
             </nav>
          </div>
       </header>
-
-      <div class="page flex-column items-centr">
-       
-         <div class="heading flex-column">
-            <h1 class="heading-title">The Road Ahead</h1>
-            <h2 class="heading-subtitle">The road ahead might be paved - it might not be.</h2>
+      <div class="page">     
+         <div class="page__heading heading">
+            <h1 class="page__title title">The Road Ahead</h1>
+            <h2 class="page__subtitle subtitle">The road ahead might be paved - it might not be.</h2>
          </div>
-         <img id="Northernlights" src="Northernlights.png" alt="Northern lights">
-         <div class="content-conteiner flex-column items-centr">
-            <p>Dark spruce forest frowned on either side the frozen waterway. The trees had been stripped by a recent wind
+         <img class="page__image" src="images/Northernlights.png" alt="Northern lights">
+         <div class="page__content-container content-container">
+            <p class="content-container__paragraf">Dark spruce forest frowned on either side the frozen waterway. The trees had been stripped by a recent wind
                of their white covering of frost, and they seemed to lean towards each other, black and ominous, in the
                fading light. A vast silence reigned over the land. The land itself was a desolation, lifeless, without
                movement, so lone and cold that the spirit of it was not even that of sadness. There was a hint in it of
@@ -48,7 +43,7 @@
                sphinx, a laughter cold as the frost and partaking of the grimness of infallibility. It was the masterful
                and incommunicable wisdom of eternity laughing at the futility of life and the effort of life. It was the
                Wild, the savage, frozen-hearted Northland Wild.</p>
-            <p>But there was life, abroad in the land and defiant. Down the frozen waterway toiled a string of wolfish
+            <p class="content-container__paragraf">But there was life, abroad in the land and defiant. Down the frozen waterway toiled a string of wolfish
                dogs. Their bristly fur was rimed with frost. Their breath froze in the air as it left their mouths,
                spouting forth in spumes of vapour that settled upon the hair of their bodies and formed into crystals of
                frost. Leather harness was on the dogs, and leather traces attached them to a sled which dragged along
@@ -57,7 +52,7 @@
                soft snow that surged like a wave before it. On the sled, securely lashed, was a long and narrow oblong box.
                There were other things on the sled—blankets, an axe, and a coffee-pot and frying-pan; but prominent,
                occupying most of the space, was the long and narrow oblong box.</p>
-            <p>In advance of the dogs, on wide snowshoes, toiled a man. At the rear of the sled toiled a second man. On the
+            <p class="content-container__paragraf">In advance of the dogs, on wide snowshoes, toiled a man. At the rear of the sled toiled a second man. On the
                sled, in the box, lay a third man whose toil was over,—a man whom the Wild had conquered and beaten down
                until he would never move nor struggle again. It is not the way of the Wild to like movement. Life is an
                offence to it, for life is movement; and the Wild aims always to destroy movement. It freezes the water to
@@ -65,7 +60,7 @@
                hearts; and most ferociously and terribly of all does the Wild harry and crush into submission man—man who
                is the most restless of life, ever in revolt against the dictum that all movement must in the end come to
                the cessation of movement.</p>
-            <p>But at front and rear, unawed and indomitable, toiled the two men who were not yet dead. Their bodies were
+            <p class="content-container__paragraf">But at front and rear, unawed and indomitable, toiled the two men who were not yet dead. Their bodies were
                covered with fur and soft-tanned leather. Eyelashes and cheeks and lips were so coated with the crystals
                from their frozen breath that their faces were not discernible. This gave them the seeming of ghostly
                masques, undertakers in a spectral world at the funeral of some ghost. But under it all they were men,
@@ -73,25 +68,19 @@
                pitting themselves against the might of a world as remote and alien and pulseless as the abysses of space.
             </p>
          </div>
-  
       </div>
-
-      <footer class="footer flex-row content-centr">
-         <div class="footer-conteiner flex-row content-betwin">
-            <a class="logotype-white">Escape.</a>
-            <nav class="navigation flex-row content-centr">
-               <ul class="footer-navigation-ul flex-row">
-                  <li class="flex-row content-centr items-centr elem-1"><a class="nav-element-white" href="##">home</a></li>
-                  <li class="flex-row content-centr items-centr elem-2"><a class="nav-element-white" href="##">categoris</a></li>
-                  <li class="flex-row content-centr items-centr elem-3"><a class="nav-element-white" href="##">about</a></li>
-                  <li class="flex-row content-centr items-centr elem-4"><a class="nav-element-white" href="##">contact</a></li>
+      <footer class="footer">
+         <div class="footer__container container">
+            <a class="footer__logotype logotype logotype_white">Escape.</a>
+            <nav class="footer__navigation navigation">
+               <ul class="footer__navigation-list navigation-list">
+                  <li><a class="footer__nav-element nav-element nav-element_white" href="#">home</a></li>
+                  <li><a class="footer__nav-element nav-element nav-element_white" href="#">categoris</a></li>
+                  <li><a class="footer__nav-element nav-element nav-element_white" href="#">about</a></li>
+                  <li><a class="footer__nav-element nav-element nav-element_white" href="#">contact</a></li>
                </ul>
             </nav>
          </div>
       </footer>
-
-   </div>
-
 </body>
-
 </html>
