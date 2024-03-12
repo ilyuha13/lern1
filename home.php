@@ -1,15 +1,79 @@
 <?php
-$posts = [
- [
-   'title' => 'The Road Ahead',
-   'subtitle' => '',
-   'img_modifier' => '',
-   'author' => '',
-   // другие свойства этого поста
- ],
- [
-   // свойства второго поста
- ],
+$featured_posts = [
+   [
+      'title' => 'Still Standing Tall',
+      'subtitle' => 'Life begins at the end of your comfort zone.',
+      'img_modifier' => './images/still-standing-tall.jpg',
+      'author' => 'William Wong',
+      'author_avatar' => './images/william-wong.jpg',
+      'date' => 'September 25, 2015'
+   ],
+   [
+      'title' => 'Still Standing Tall',
+      'subtitle' => 'Life begins at the end of your comfort zone.',
+      'img_modifier' => './images/still-standing-tall.jpg',
+      'author' => 'William Wong',
+      'author_avatar' => './images/william-wong.jpg',
+      'date' => 'September 25, 2015'
+   ]
+];
+?>
+<?php
+$most_resent = [
+   [
+      'title' => 'Still Standing Tall',
+      'subtitle' => 'Life begins at the end of your comfort zone.',
+      'img_modifier' => './images/still-standing-tall.jpg',
+      'author' => 'William Wong',
+      'author_avatar' => './images/william-wong.jpg',
+      'date' => 'September 25, 2015'
+      // другие свойства этого поста
+   ],
+   [
+      'title' => 'Sunny Side Up',
+      'subtitle' => 'No place is ever as bad as they tell you it’s going to be.',
+      'img_modifier' => './images/sunny-side-up.png',
+      'author' => 'Mat Vogel',
+      'author_avatar' => './images/mat-vogel.jpg',
+      'date' => 'September 25, 2015'
+      // свойства второго поста
+   ],
+   [
+      'title' => 'Water Falls',
+      'subtitle' => 'We travel not to escape life, but for life not to escape us.',
+      'img_modifier' => './images/water-falls.png',
+      'author' => 'Mat Vogel',
+      'author_avatar' => './images/mat-vogel.jpg',
+      'date' => 'September 25, 2015'
+      // свойства второго поста
+   ],
+   [
+      'title' => 'Through the Mist',
+      'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
+      'img_modifier' => './images/trough-the-mist.png',
+      'author' => 'William Wong',
+      'author_avatar' => './images/william-wong.jpg',
+      'date' => 'September 25, 2015'
+      // свойства второго поста
+   ],
+   [
+      'title' => 'Awaken Early',
+      'subtitle' => 'Not all those who wander are lost.',
+      'img_modifier' => './images/awaken-early.png',
+      'author' => 'Mat Vogels',
+      'author_avatar' => './images/mat-vogel.jpg',
+      'date' => 'September 25, 2015'
+      // свойства второго поста
+   ],
+   [
+      'title' => 'Try it Always',
+      'subtitle' => 'The world is a book, and those who do not travel read only one page.',
+      'img_modifier' => './images/try-it-always.png',
+      'author' => 'Mat Vogels',
+      'author_avatar' => './images/mat-vogel.jpg',
+      'date' => 'September 25, 2015'
+      // свойства второго поста
+   ],
 ];
 ?>
 
@@ -21,8 +85,7 @@ $posts = [
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Oxygen&display=swap" rel="stylesheet">
@@ -72,8 +135,7 @@ $posts = [
             <h2 class="featured-post__section-title section-title title">Featured Posts</h2>
             <div class="featured-post__section-flex-box section-flex-box">
                <a href="#" class="featured-post__card card">
-                  <img class="card__image card__image_featured-post" src="./static/images/the-road-ahead-card.png"
-                     alt="the-road-ahead">
+                  <img class="card__image card__image_featured-post" src="./static/images/the-road-ahead-card.png" alt="the-road-ahead">
                   <h2 class="card__title title">The Road Ahead</h2>
                   <div class="card__subtitle subtitle">The road ahead might be paved - it might not be.</div>
                   <div class="card__footer card__footer_featured-post">
@@ -85,8 +147,7 @@ $posts = [
                   </div>
                </a>
                <a href="#" class="featured-post__card card">
-                  <img class="card__image card__image_featured-post" src="/static/images/from-top-down-card.png"
-                     alt="from-top-down">
+                  <img class="card__image card__image_featured-post" src="/static/images/from-top-down-card.png" alt="from-top-down">
                   <div class="from-top-down__sticker sticker subtitle">adventure</div>
                   <h2 class="card__title title">From Top Down</h2>
                   <div class="card__subtitle subtitle">Once a year, go someplace you’ve never been before.</div>
@@ -103,97 +164,11 @@ $posts = [
          <section class="most-resent">
             <h2 class="most-resent__section-title section-title title">Most Resent</h2>
             <div class="most-resent__section-flex-box section-flex-box">
-               <a href="#" class="most-resent__card card">
-                  <img class="card__image" src="./images/still-standing-tall.jpg" alt="still-standing-tall">
-                  <!-- class bem потерялся -->
-                  <div class="card__heading">
-                     <h2 class="card__title_most-resent card__title title">Still Standing Tall</h2>
-                     <div class="card__subtitle_most-resent card__subtitle subtitle">Life begins at the end of your
-                        comfort zone.</div>
-                  </div>
-                  <div class="card__footer card__footer_most-resent">
-                     <div class="card__subscrybe">
-                        <img src="./images/william-wong.jpg" alt="william-wong" class="card__icon">
-                        <div class="card__name card__name_most-resent">William Wong</div>
-                     </div>
-                     <div class="card__date card__date_most-resent">September 25, 2015</div>
-                  </div>
-               </a>
-               <a href="#" class="most-resent__card card">
-                  <img class="card__image" src="./images/sunny-side-up.png" alt="sunny-side-up">
-                  <div class="card__heading">
-                     <h2 class="card__title_most-resent card__title title">Sunny Side Up</h2>
-                     <div class="card__subtitle_most-resent card__subtitle subtitle">No place is ever as bad as they
-                        tell you it’s going to be.</div>
-                  </div>
-                  <div class="card__footer card__footer_most-resent">
-                     <div class="card__subscrybe">
-                        <img src="./images/mat-vogel.jpg" alt="mat-vogel" class="card__icon">
-                        <div class="card__name card__name_most-resent">Mat Vogel</div>
-                     </div>
-                     <div class="card__date card__date_most-resent">September 25, 2015</div>
-                  </div>
-               </a>
-               <a href="#" class="most-resent__card card">
-                  <img class="card__image" src="./images/water-falls.png" alt="water-falls">
-                  <div class="card__heading">
-                     <h2 class="card__title_most-resent card__title title">Water Falls</h2>
-                     <div class="card__subtitle_most-resent card__subtitle subtitle">We travel not to escape life, but
-                        for life not to escape us.</div>
-                  </div>
-                  <div class="card__footer card__footer_most-resent">
-                     <div class="card__subscrybe">
-                        <img src="./images/mat-vogel.jpg" alt="mat-vogel" class="card__icon">
-                        <div class="card__name card__name_most-resent">Mat Vogel</div>
-                     </div>
-                     <div class="card__date card__date_most-resent">September 25, 2015</div>
-                  </div>
-               </a>
-               <a href="#" class="most-resent__card card">
-                  <img class="card__image" src="./images/trough-the-mist.png" alt="trough-the-mist">
-                  <div class="card__heading">
-                     <h2 class="card__title_most-resent card__title title">Through the Mist</h2>
-                     <div class="card__subtitle_most-resent card__subtitle subtitle">Travel makes you see what a tiny
-                        place you occupy in the world.</div>
-                  </div>
-                  <div class="card__footer card__footer_most-resent">
-                     <div class="card__subscrybe">
-                        <img src="./images/william-wong.jpg" alt="william-wong" class="card__icon">
-                        <div class="card__name card__name_most-resent">William Wong</div>
-                     </div>
-                     <div class="card__date card__date_most-resent">September 25, 2015</div>
-                  </div>
-               </a>
-               <a href="#" class="most-resent__card card">
-                  <img class="card__image" src="./images/awaken-early.png" alt="awaken-early">
-                  <div class="card__heading">
-                     <h2 class="card__title_most-resent card__title title">Awaken Early</h2>
-                     <div class="card__subtitle_most-resent card__subtitle subtitle">Not all those who wander are lost.
-                     </div>
-                  </div>
-                  <div class="card__footer card__footer_most-resent">
-                     <div class="card__subscrybe">
-                        <img src="./images/mat-vogel.jpg" alt="mat-vogel" class="card__icon">
-                        <div class="card__name card__name_most-resent">Mat Vogel</div>
-                     </div>
-                     <div class="card__date card__date_most-resent">September 25, 2015</div>
-                  </div>
-               </a>
-               <a href="#" class="most-resent__card card">
-                  <img class="card__image" src="./images/try-it-always.png" alt="try-it-always">
-                  <div class="card__heading">
-                     <h2 class="card__title_most-resent card__title title">Try it Always</h2>
-                     <div class="card__subtitle_most-resent card__subtitle subtitle">The world is a book, and those who
-                        do not travel read only one page.</div>
-                  </div>
-                  <div class="card__footer card__footer_most-resent">
-                     <div class="card__subscrybe">
-                        <img src="./images/mat-vogel.jpg" alt="mat-vogel" class="card__icon">
-                        <div class="card__name card__name_most-resent">Mat Vogel</div>
-                     </div>
-                     <div class="card__date card__date_most-resent">September 25, 2015</div>
-                  </div>
-               </a>
+               <?php
+               foreach ($most_resent as $post) {
+                  include 'most_resent_preview.php';
+               }
+               ?>
             </div>
          </section>
       </div>
