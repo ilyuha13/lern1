@@ -1,20 +1,83 @@
 <?php
+// 1. вывести все данные о сервере и заголовках
+echo 'Данные в глоабльном массиве $_SERVER';
+foreach ($_SERVER as $key => $header) {
+  echo "{$key} = {$header} </br>";
+};
+echo '<br>---------------<br>';
+$requestTime = $_SERVER['REQUEST_TIME'];
+echo "Timestamp запроса {$requestTime} <br>";
+
+// 3.1 работа с timestamp: вывести текущее дата+время в определенном формате
+// все форматы https://www.php.net/manual/ru/datetime.format.php
+$now = date("Y-m-d H:i:s");
+echo "Текущая дата и время: {$now} <br>";
+
+
+// 3.2 работа с timestamp: вывести определенную дату и время в определенном формате
+$requestDateTime = date("Y-m-d H:i:s", $requestTime);
+echo "Дата и время запроса: {$requestDateTime} <br>";
+
+$lastDay = date("H-i-s Y.m.d", 1717189199);
+echo "Последний день учебы: {$lastDay} <br>";
+
+
+// 3.3 работа с timestamp: превратить дату в timestamp
+$timestampNow = strtotime('now');
+echo "Текущий timestamp: {$timestampNow} <br>";
+
+$timestampDatetime = strtotime($now);
+echo "Текущий timestamp: {$timestampDatetime} <br>";
+
+$timestampNextWeek = strtotime('+1 week 2 days 4 hours 2 seconds');
+echo "Какой-то timestamp на след неделе {$timestampNextWeek} <br>";
+
+echo mktime(9, 24, 57, 5, 23, 1995) . '<br>';
+
+echo '<br>---------------<br>';
+
+// 4. вывести метод, URL и IP
+$method = $_SERVER['REQUEST_METHOD'];
+$url = $_SERVER['REQUEST_URI'];
+$ipAddress = $_SERVER['REMOTE_ADDR'];
+
+echo 'Method: ' . $method . '</br>';
+echo 'URL: ' . $url . '</br>';
+echo 'IP Address: ' . $ipAddress . '</br>';
+
+echo '<br>---------------<br>';
+
+// 5. Распечатаем все GET-параметры
+foreach ($_GET as $key => $value) {
+   echo "{$key} = {$value} </br>";
+ }
+
+ // 6. Распечатаем все POST-параметры
+foreach ($_POST as $key => $value) {
+   echo "{$key} = {$value} </br>";
+ }
+?>
+
+
+<?php
 $featured_posts = [
    [
-      'title' => 'Still Standing Tall',
-      'subtitle' => 'Life begins at the end of your comfort zone.',
-      'img_modifier' => './images/still-standing-tall.jpg',
-      'author' => 'William Wong',
-      'author_avatar' => './images/william-wong.jpg',
-      'date' => 'September 25, 2015'
+      'title' => 'The Road Ahead',
+      'subtitle' => 'The road ahead might be paved - it might not be.',
+      'img_modifier' => './images/the-road-ahead-card.png',
+      'author' => 'Mat Vogels',
+      'author_avatar' => './images/mat-vogel.jpg',
+      'date' => 'September 25, 2015',
+      'sticker' => ''
    ],
    [
-      'title' => 'Still Standing Tall',
-      'subtitle' => 'Life begins at the end of your comfort zone.',
-      'img_modifier' => './images/still-standing-tall.jpg',
+      'title' => 'From Top Down',
+      'subtitle' => 'Once a year, go someplace you’ve never been before.',
+      'img_modifier' => './images/from-top-down-card.png',
       'author' => 'William Wong',
       'author_avatar' => './images/william-wong.jpg',
-      'date' => 'September 25, 2015'
+      'date' => 'September 25, 2015',
+      'sticker' => 'Adventure'
    ]
 ];
 ?>
@@ -89,7 +152,7 @@ $most_resent = [
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Oxygen&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="/style/style.css">
    <title>Document</title>
 
 </head>
@@ -116,7 +179,7 @@ $most_resent = [
       <div class="header__subtitle subtitle subtitle_white">We travel the world in search of stories. Come along for the
          ride.</div>
       <a href="#" class="header__button">View Latest Posts</a>
-      <!-- href -->
+
 
    </div>
    <div class="page">
@@ -134,31 +197,11 @@ $most_resent = [
          <section class="featured-posts">
             <h2 class="featured-post__section-title section-title title">Featured Posts</h2>
             <div class="featured-post__section-flex-box section-flex-box">
-               <a href="#" class="featured-post__card card">
-                  <img class="card__image card__image_featured-post" src="./static/images/the-road-ahead-card.png" alt="the-road-ahead">
-                  <h2 class="card__title title">The Road Ahead</h2>
-                  <div class="card__subtitle subtitle">The road ahead might be paved - it might not be.</div>
-                  <div class="card__footer card__footer_featured-post">
-                     <div class="card__subscrybe">
-                        <img class="card__icon" src="./images/mat-vogel.jpg" alt="mat-vogel">
-                        <div class="card__name">Mat Vogels</div>
-                     </div>
-                     <div class="card__date">September 25, 2015</div>
-                  </div>
-               </a>
-               <a href="#" class="featured-post__card card">
-                  <img class="card__image card__image_featured-post" src="/static/images/from-top-down-card.png" alt="from-top-down">
-                  <div class="from-top-down__sticker sticker subtitle">adventure</div>
-                  <h2 class="card__title title">From Top Down</h2>
-                  <div class="card__subtitle subtitle">Once a year, go someplace you’ve never been before.</div>
-                  <div class="card__footer card__footer_featured-post">
-                     <div class="card__subscrybe">
-                        <img src="./images/william-wong.jpg" alt="william-wong" class="card__icon">
-                        <div class="card__name">William Wong</div>
-                     </div>
-                     <div class="card__date">September 25, 2015</div>
-                  </div>
-               </a>
+               <?php
+               foreach ($featured_posts as $post) {
+                  include 'featured_posts_preview.php';
+               }
+               ?>
             </div>
          </section>
          <section class="most-resent">
